@@ -6,6 +6,16 @@ public class PersonHPUI : MonoBehaviour
 {
     private Image imageHP;
     public static float CurentHP = 100f;
+    public PersoneData data;
+
+    private void OnEnable()
+    {
+        CurentHP = data.currentHP;
+    }
+    private void OnDisable()
+    {
+        data.currentHP = CurentHP;
+    }
 
     private void Awake()
     {

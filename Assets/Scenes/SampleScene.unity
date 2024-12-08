@@ -143,6 +143,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5225282228448652119, guid: c1c8a765d8926754d85b246ddabaa3cb, type: 3}
+      propertyPath: zombyData
+      value: 
+      objectReference: {fileID: 11400000, guid: ef8c63f8314b0064cb564593671d252f, type: 2}
+    - target: {fileID: 5225282228448652119, guid: c1c8a765d8926754d85b246ddabaa3cb, type: 3}
       propertyPath: transformPersone
       value: 
       objectReference: {fileID: 2002410163}
@@ -164,11 +168,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5225282228448652122, guid: c1c8a765d8926754d85b246ddabaa3cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5225282228448652122, guid: c1c8a765d8926754d85b246ddabaa3cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5225282228448652122, guid: c1c8a765d8926754d85b246ddabaa3cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -214,6 +218,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7718076198503672009, guid: c1c8a765d8926754d85b246ddabaa3cb, type: 3}
+      propertyPath: zombyData
+      value: 
+      objectReference: {fileID: 11400000, guid: ef8c63f8314b0064cb564593671d252f, type: 2}
     - target: {fileID: 8048012349195350771, guid: c1c8a765d8926754d85b246ddabaa3cb, type: 3}
       propertyPath: m_FillAmount
       value: 1
@@ -6386,6 +6394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b988002a0c84a429f1036536149a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: eca8929fce0f0034a91cabde6f485b15, type: 2}
 --- !u!114 &1436921434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7301,6 +7310,10 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 1761926004}
+    - target: {fileID: 4907899309492623816, guid: e641202f06776a84aba3c85c64423678, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: eca8929fce0f0034a91cabde6f485b15, type: 2}
     - target: {fileID: 4907899309492623816, guid: e641202f06776a84aba3c85c64423678, type: 3}
       propertyPath: startPoint
       value: 

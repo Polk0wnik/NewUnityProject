@@ -27,7 +27,7 @@ public class FuncLessons : MonoBehaviour
 
     private string ShowMyText()// возвращает тип данных - TextMeshProUGUI
     {
-        string myText = "Hello World"; // local data
+        string myText = "Hello World"; // local gameData
         return myText;
     }
     private float Calculate(float A , int B )

@@ -8,12 +8,22 @@ public class MovePerson : MonoBehaviour
     private PersonAnimator personeAnimator;
     private GunRotation gun;
     [SerializeField] private Transform startPoint;
+    public PersoneData data;
 
     [SerializeField] private float speed = 30f;
     [SerializeField] private float forceJump = 20f;
     
     private bool isGround = false;
 
+    private void OnEnable()
+    {
+        Time.timeScale = 1f;
+        transformPersone.position = data.position;
+    }
+    private void OnDisable()
+    {
+        data.position = transformPersone.position;
+    }
     private void Awake()
     {
         personeAnimator = GetComponent<PersonAnimator>();
@@ -45,8 +55,8 @@ public class MovePerson : MonoBehaviour
     public void Moving()
     {   
         // получаем направление
-        float x = Input.GetAxis("Horizontal"); // key - A, Key - D, x = -1f или x = 1f, x = 0f
-       //float y = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("Horizontal"); // key - A, Key - D, xPers = -1f или xPers = 1f, xPers = 0f
+       //float yPers = Input.GetAxis("Vertical");
 
         gun.UpdateDirectionGun(x);
         InversDirection(x);

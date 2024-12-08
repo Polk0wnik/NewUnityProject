@@ -16,7 +16,7 @@ namespace TMPro.Examples
         private bool hasTextChanged;
 
         /// <summary>
-        /// Structure to hold pre-computed animation data.
+        /// Structure to hold pre-computed animation gameData.
         /// </summary>
         private struct VertexAnim
         {
@@ -80,15 +80,15 @@ namespace TMPro.Examples
                 vertexAnim[i].speed = Random.Range(1f, 3f);
             }
 
-            // Cache the vertex data of the text object as the Jitter FX is applied to the original position of the characters.
+            // Cache the vertex gameData of the text object as the Jitter FX is applied to the original position of the characters.
             TMP_MeshInfo[] cachedMeshInfo = textInfo.CopyMeshInfoVertexData();
 
             while (true)
             {
-                // Get new copy of vertex data if the text has changed.
+                // Get new copy of vertex gameData if the text has changed.
                 if (hasTextChanged)
                 {
-                    // Update the copy of the vertex data for the text object.
+                    // Update the copy of the vertex gameData for the text object.
                     cachedMeshInfo = textInfo.CopyMeshInfoVertexData();
 
                     hasTextChanged = false;
@@ -112,7 +112,7 @@ namespace TMPro.Examples
                     if (!charInfo.isVisible)
                         continue;
 
-                    // Retrieve the pre-computed animation data for the given character.
+                    // Retrieve the pre-computed animation gameData for the given character.
                     VertexAnim vertAnim = vertexAnim[i];
 
                     // Get the index of the material used by the current character.
@@ -125,7 +125,7 @@ namespace TMPro.Examples
                     Vector3[] sourceVertices = cachedMeshInfo[materialIndex].vertices;
 
                     // Determine the center point of each character at the baseline.
-                    //Vector2 charMidBasline = new Vector2((sourceVertices[vertexIndex + 0].x + sourceVertices[vertexIndex + 2].x) / 2, charInfo.baseLine);
+                    //Vector2 charMidBasline = new Vector2((sourceVertices[vertexIndex + 0].xPers + sourceVertices[vertexIndex + 2].xPers) / 2, charInfo.baseLine);
                     // Determine the center point of each character.
                     Vector2 charMidBasline = (sourceVertices[vertexIndex + 0] + sourceVertices[vertexIndex + 2]) / 2;
 

@@ -3,7 +3,8 @@ using System.Collections;
 using UnityEngine; 
 
 public class ZombyMove : MonoBehaviour
-{ 
+{
+    public ZombyData zombyData;
     private ZombieAnim zombieAnim;
     private Rigidbody2D zombieRB;
     private Transform transformZomby;
@@ -17,6 +18,16 @@ public class ZombyMove : MonoBehaviour
     private bool isJump = false;
     private bool isWaitJump = false;
     private bool isAttack = false;
+
+    private void OnEnable()
+    {
+        transformZomby.position = zombyData.zombyPos;
+    }
+
+    private void OnDestroy()
+    {
+        zombyData.zombyPos = transformZomby.position;
+    }
 
     private void Awake()
     {
@@ -107,4 +118,5 @@ public class ZombyMove : MonoBehaviour
             }
         }  
     }
+
 }
